@@ -7,10 +7,12 @@ import logging
 from eeborg import Eeborg
 from config import Config
 
+session_name = input("Enter session name: ")
+
 logging.basicConfig(level=logging.INFO)
 
 borg = Eeborg(
-        "stdborg",
+        session_name,
         plugin_path="stdplugins",
         connection_retries=None,
         api_id=Config.API_ID,
