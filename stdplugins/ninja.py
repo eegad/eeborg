@@ -8,7 +8,7 @@ from telethon import events
 from telethon.tl.types import InputPeerSelf
 import telethon.utils
 
-from uniborg import util
+from eeborg import util
 
 
 async def get_target_message(event):

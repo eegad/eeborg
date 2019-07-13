@@ -3,7 +3,7 @@ Reply to a file with .f to send it as a photo
 """
 from io import BytesIO
 
-from uniborg import util
+from eeborg import util
 
 from telethon import types
 from telethon.errors import PhotoInvalidDimensionsError

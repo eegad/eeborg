@@ -4,12 +4,12 @@
 
 import logging
 
-from uniborg import Uniborg
+from eeborg import Eeborg
 import api_key
 
 logging.basicConfig(level=logging.INFO)
 
-borg = Uniborg(
+borg = Eeborg(
         "stdborg",
         plugin_path="stdplugins",
         connection_retries=None,

@@ -1,6 +1,6 @@
 from io import BytesIO
 
-from uniborg import util
+from eeborg import util
 from PIL import Image
 from telethon import types, utils, events
 from telethon.tl.functions.messages import SaveGifRequest, UploadMediaRequest
