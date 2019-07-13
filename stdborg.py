@@ -5,7 +5,7 @@
 import logging
 
 from eeborg import Eeborg
-import api_key
+from config import Config
 
 logging.basicConfig(level=logging.INFO)
 
@@ -13,8 +13,8 @@ borg = Eeborg(
         "stdborg",
         plugin_path="stdplugins",
         connection_retries=None,
-        api_id=api_key.id,
-        api_hash=api_key.hash
+        api_id=Config.API_ID,
+        api_hash=Config.API_HASH
 )
 
 borg.run_until_disconnected()
