@@ -58,7 +58,7 @@ class Eeborg(TelegramClient):
     def load_plugin_from_file(self, path):
         path = Path(path)
         shortname = path.stem
-        name = f"_UniborgPlugins.{self._name}.{shortname}"
+        name = f"_EeborgPlugins.{self._name}.{shortname}"
 
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
