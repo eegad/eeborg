@@ -4,7 +4,7 @@ Pluggable [``asyncio``](https://docs.python.org/3/library/asyncio.html)
 [Telegram](https://telegram.org) UserBot based on
 [Telethon](https://github.com/LonamiWebs/Telethon).
 
-## installing
+## Installing
 
 Simply clone the repository and run the main file:
 ```sh
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 python stdborg.py
 ```
 
-## design
+## Design
 
 The modular design of the project enhances your Telegram experience
 through [plugins](https://github.com/eegad/eeborg/tree/master/stdplugins)
@@ -35,13 +35,13 @@ async def handler(event):
     await event.reply('hey')
 ```
 
-## internals
+## Internals
 
 The core features offered by the custom `TelegramClient` live under the
 [`eeborg/`](https://github.com/eegad/eeborg/tree/master/eeborg)
 directory, with some utilities, enhancements and the core plugin.
 
-## learning
+## Learning
 
 Check out the already-mentioned
 [plugins](https://github.com/eegad/eeborg/tree/master/stdplugins)
