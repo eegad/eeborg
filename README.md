@@ -38,7 +38,7 @@ async def handler(event):
 ## internals
 
 The core features offered by the custom `TelegramClient` live under the
-[`eeborg/`](https://github.com/eegad/eeborg/tree/master/uniborg)
+[`eeborg/`](https://github.com/eegad/eeborg/tree/master/eeborg)
 directory, with some utilities, enhancements and the core plugin.
 
 ## learning
