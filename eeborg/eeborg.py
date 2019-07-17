@@ -29,8 +29,13 @@ class Eeborg(TelegramClient):
         self._plugin_path = plugin_path
 
         kwargs = {
-            "api_id": 6, "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
+            "api_id": 6,
+            "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
+            "device_model": "GNU/Linux NonUI",
+            "app_version": "eeborg 1.0.1",
+            "lang_code": "en",
             **kwargs}
+
         super().__init__(session, **kwargs)
 
         # This is a hack, please avert your eyes
