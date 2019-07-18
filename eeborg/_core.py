@@ -4,10 +4,19 @@
 
 import asyncio
 import traceback
+import sys
+from telethon import __version__
 
 from eeborg import util
 
 DELETE_TIMEOUT = 2
+
+ABOUT_MESSAGE = """eeborg by @eegad
+
+`Help command: .help`
+
+Python {}
+Telethon {}""".format(sys.version, __version__)
 
 
 @borg.on(util.admin_cmd(r"^\.(?:re)?load (?P<shortname>\w+)$"))
@@ -46,3 +55,9 @@ async def remove(event):
 
     await asyncio.sleep(DELETE_TIMEOUT)
     await borg.delete_messages(msg.to_id, msg)
+
+
+@borg.on(util.admin_cmd(r"^\.alive$"))
+async def alive(event):
+    await event.delete()
+    await event.respond(f"{ABOUT_MESSAGE}")
