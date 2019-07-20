@@ -24,7 +24,7 @@ class Eeborg(TelegramClient):
         # This means that using the Storage type as a storage would work too.
         self._name = session
         self.storage = storage or (lambda n: Storage(Path("data") / n))
-        self._logger = logging.getLogger(session)
+        self._logger = logging.getLogger("eeborg")
         self._plugins = {}
         self._plugin_path = plugin_path
 
