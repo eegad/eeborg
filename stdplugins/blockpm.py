@@ -27,8 +27,8 @@ async def _(event):
                 else:
                     WARN_CHATS[event.message.from_id] = WARN_CHATS[event.message.from_id] + 1
                     await borg.send_message(event.message.from_id, """
-                        Do not message! You have been warned! ({})
-                        ~This is an automated message~""".format(WARN_CHATS[event.message.from_id]))
+                    Do not message! You have been warned! ({})
+                    ~This is an automated message~""".format(WARN_CHATS[event.message.from_id]))
             else:
                 if event.message.from_id not in WARN_CHATS:
                     warns_now = 0
