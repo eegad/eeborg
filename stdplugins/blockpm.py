@@ -16,6 +16,7 @@ async def _(event):
             if event.message.from_id in WARN_CHATS:
                 if WARN_CHATS[event.message.from_id] == MAX_WARNS:
                     sender = await event.get_sender()
+                    await borg.send_message(sender, "You're **blocked** now! Wait till I come back!!")
                     await borg(functions.contacts.BlockRequest(sender))
                     del WARN_CHATS[event.message.from_id]
                     me = await borg.get_me()
@@ -27,16 +28,16 @@ async def _(event):
                 else:
                     WARN_CHATS[event.message.from_id] = WARN_CHATS[event.message.from_id] + 1
                     await borg.send_message(event.message.from_id, """
-                    Do not message! You have been warned! ({})
-                    ~This is an automated message~""".format(WARN_CHATS[event.message.from_id]))
+                    **Do not message! You have been warned! ({})**
+                    __~This is an automated message~__""".format(WARN_CHATS[event.message.from_id]))
             else:
                 if event.message.from_id not in WARN_CHATS:
                     warns_now = 0
                 else:
                     warns_now = WARN_CHATS[event.message.from_id]
                 await borg.send_message(event.message.from_id, """
-                    You can send {} more messages! You have been warned!
-                    ~This is an automated message~""".format(MAX_WARNS - warns_now))
+                **You can send {} more messages! You have been warned!**
+                __~This is an automated message~__""".format(MAX_WARNS - warns_now))
                 WARN_CHATS[event.message.from_id] = 1
 
 
