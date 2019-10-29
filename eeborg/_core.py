@@ -11,7 +11,7 @@ from eeborg import util
 
 DELETE_TIMEOUT = 2
 
-ABOUT_MESSAGE = """eeborg by @eegad
+ABOUT_MESSAGE = """eeborg by @ssiyad
 
 `Help command: .help`
 
