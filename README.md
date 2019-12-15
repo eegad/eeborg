@@ -10,10 +10,18 @@ Simply clone the repository and run the main file:
 ```sh
 git clone https://github.com/ssiyad/eeborg.git
 cd eeborg
+```
+then
+```
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python stdborg.py
+```
+or
+```
+docker build -t eeborg .
+docker run -e SESSION='session_name' eeborg
 ```
 
 ## Internals
