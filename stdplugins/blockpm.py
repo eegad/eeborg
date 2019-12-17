@@ -14,12 +14,14 @@ async def _(event):
     if event.is_private and not (await event.get_sender()).bot and event.message.from_id not in WHITE_CHATS:
         if event.message.from_id:
             if event.message.from_id in WARN_CHATS:
+                sender = await event.get_sender()
+                me = await borg.get_me()
+                if sender == me:
+                    return
                 if WARN_CHATS[event.message.from_id] == MAX_WARNS:
-                    sender = await event.get_sender()
                     await borg.send_message(sender, "You're **blocked** now! Wait till I come back!!")
                     await borg(functions.contacts.BlockRequest(sender))
                     del WARN_CHATS[event.message.from_id]
-                    me = await borg.get_me()
                     if sender.last_name:
                         l_name = sender.last_name
                     else:
